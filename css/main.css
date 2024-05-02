@@ -1,0 +1,20 @@
+h1,
+h2 {
+	color: darkred;
+	text-align: center;
+}
+
+h1 {
+	font-size: 5vw;
+}
+
+h2 {
+	font-size: 4vw;
+}
+
+#index_photo img {
+    width: 80%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
