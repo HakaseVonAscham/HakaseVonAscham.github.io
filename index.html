@@ -21,11 +21,13 @@
 		</header>
 		<div class="content">
 			<h3>Hey_</h3>
-			<h2>I am<span id="text">Axel</span></h2>
+			<h2>I am <span id="text">Axel</span></h2>
 			<p>Lorem ipsum dolor sit amet consectetur adipisicing</p>
 			<button>Hire Me</button>
 			<button class="chat"><ion-icon name="chatbubbles-outline"></ion-icon> Let's Chat</button>
 		</div>
+		<img src="images/colors.png" class="colors">
+		<img src="images/axel.png" class="men">
 		<ul class="sci">
 			<li><a href="#"><ion-icon name="logo-facebook"></ion-icon></a></li>
 			<li><a href="#"><ion-icon name="logo-linkedin"></ion-icon></a></li>
@@ -38,16 +40,25 @@
 		</div>
 	</section>
 
+	<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+	<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+	<script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
 	<script>
+		let typingText = new Typed("#text", {
+			strings : ["Axel", "Coder"],
+			loop : true,
+			typeSpeed : 100,
+			backSpeed : 50,
+			backDelay : 1000,
+		})
+
 		let banner = document.querySelector('.banner')
 		let dayNight = document.querySelector('.dayNight')
 		dayNight.onclick = function() {
 			banner.classList.toggle('night')
 		}
 	</script>
-
-	<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-	<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>

@@ -22,6 +22,21 @@
 {
 	background: #333;
 }
+
+.banner::before
+{
+	content: '';
+	position: absolute;
+	left: 30%;
+	top: 10%;
+	width: 150px;
+	height: 150px;
+	background: url(../images/dotted.png);
+	background-size: cover;
+	animation: animateColor 10s linear infinite;
+	transition-delay: -5px;
+}
+
 header
 {
 	position: absolute;
@@ -147,6 +162,7 @@ header ul li a
 }
 .dayNight
 {
+	padding: 11px;
 	position: absolute;
 	bottom: 25px;
 	left: 50%;
@@ -190,4 +206,45 @@ header ul li a
 .banner.night .sci li a:hover
 {
 	color: #2196f3;
+}
+
+.colors
+{
+	position: absolute;
+	right: 0;
+	max-width: 800px;
+	animation: animateColor 8s ease-in-out infinite;
+}
+
+@keyframes animateColor
+{
+	0%, 100%
+	{
+		transform: translateY(0px);
+	}
+	50%
+	{
+		transform: translateY(50px);
+	}
+}
+
+.men
+{
+	position: absolute;
+	right: 100px;
+	bottom: 0;
+	max-height: 85vh;
+	animation: animateMen 8s ease-in-out infinite;
+}
+
+@keyframes animateMen
+{
+	0%, 100%
+	{
+		transform: translateX(0px);
+	}
+	50%
+	{
+		transform: translateX(-50px);
+	}
 }
