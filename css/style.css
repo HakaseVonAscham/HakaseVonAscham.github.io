@@ -1,0 +1,9 @@
+.slide-in {
+	opacity: 0;
+	transform: translateX(-100px);
+	animation: slideIn 3s forwards;
+}
+
+.avatar {
+	border-radius: 50%;
+}
