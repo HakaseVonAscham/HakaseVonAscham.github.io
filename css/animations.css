@@ -1,0 +1,11 @@
+@keyframes slideIn {
+	to {
+		transform: translateX(0);
+	}
+}
+
+@keyframes appear {
+	to {
+		opacity: 1;
+	}
+}
