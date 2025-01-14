@@ -1,12 +1,15 @@
-document.addEventListener("DOMContentLoaded", function() {
-    // Redireccionar después de X segundos (por ejemplo, 3 segundos)
-    setTimeout(function() {
-        window.location.href = "html/main/main.html"; // Cambia "principal.html" por la ruta de tu página principal
-    }, 300000); // 3000 milisegundos = 3 segundos
+function Main() {
+    let banner = document.querySelector('.banner')
+    let dayNight = document.querySelector('.dayNight')
 
-    // Redireccionar al hacer clic en el logo
-    var logo = document.querySelector(".logo img");
-    logo.addEventListener("click", function() {
-        window.location.href = "html/main/main.html"; // Cambia "principal.html" por la ruta de tu página principal
-    });
-});
+    dayNight.onclick = function() {
+        banner.classList.toggle('night')
+    }
+    let typingText = new Typed("#text", {
+        strings : ["Axel", "Coder"],
+        loop : true,
+        typeSpeed : 80,
+        backSpeed : 80,
+        backDelay : 1500,
+    })
+}

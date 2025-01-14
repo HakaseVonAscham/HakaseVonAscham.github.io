@@ -11,7 +11,30 @@
 @media only screen and (min-width: 992px) {...}
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {...} 
+@media only screen and (min-width: 1200px) {...}
+
+<link rel="stylesheet" media="(max-width: 800px")" href="o.css" />
+
+@media screen and (min-width: 700px) and (orientation:landscpae) o portrait
 
 https://fonts.google.com/specimen/Parkinsans/license?preview.text=Luis%20Axel%20Godoy%20Vela&lang=es_Latn
 https://fonts.google.com/specimen/Merriweather?preview.text=Luis%20Axel%20Godoy%20Vela
+
+localizado al final de main html
+
+		<script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    // Redireccionar después de X segundos (por ejemplo, 3 segundos)
+    setTimeout(function() {
+        window.location.href = "html/main/main.html"; // Cambia "principal.html" por la ruta de tu página principal
+    }, 300000); // 3000 milisegundos = 3 segundos
+
+    // Redireccionar al hacer clic en el logo
+    var logo = document.querySelector(".logo img");
+    logo.addEventListener("click", function() {
+        window.location.href = "html/main/main.html"; // Cambia "principal.html" por la ruta de tu página principal
+    });
+});
