@@ -20,6 +20,10 @@
 https://fonts.google.com/specimen/Parkinsans/license?preview.text=Luis%20Axel%20Godoy%20Vela&lang=es_Latn
 https://fonts.google.com/specimen/Merriweather?preview.text=Luis%20Axel%20Godoy%20Vela
 
+Foto de Cliford Mervil: https://www.pexels.com/es-es/foto/cielo-estrellado-sobre-montanas-2469122/
+Foto de Simon Berger: https://www.pexels.com/es-es/foto/silueta-de-montanas-1323550/
+Foto de Júlio Riccó: https://www.pexels.com/es-es/foto/blanco-y-negro-oscuro-modelo-estampado-18372324/
+
 localizado al final de main html
 
 		<script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>

@@ -1,13 +1,57 @@
-body {
-    background: #cfd9e8;
-    height: 100%;
+/*===== Variables CSS =====*/
+:root {
+    --header-height: 3rem;
+    --font-semi: 600;
+    /*===== Colores =====*/
+    --hue-color: 221;
+    --first-color: hsl(var(--hue-color), 95%, 55%);
+    --second-color: hsl(var(--hue-color), 56%, 12%);
+    /*===== Fuente y tipografia =====*/
+    --body-font: "Parkinsans", sans-serif;
+    --big-font-size: 2rem;
+    --h2-font-size: 1.25rem;
+    --normal-font-size: .938rem;
+    --smaller-font-size: .75rem;
+    /*===== Margenes =====*/
+    --mb-2: 1rem;
+    --mb-4: 2rem;
+    --mb-5: 2.5rem;
+    --mb-6: 3rem;
+    /*===== z index =====*/
+    --z-back: -10;
+    --z-fixed: 100;
 }
+
+/*===== Base =====*/
+*, ::before, ::after {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: rgb(2,0,36);
+    background: linear-gradient(145deg,
+        rgba(2,0,36,1) 0%,
+        rgba(53,53,184,1) 38%,
+        rgba(135,205,220,1) 100%); 
+    margin: var(--header-height) 0 0 0;
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+    color: var(--second-color);
+}
+/*
+html{
+    height: 100%;
+    margin: 0;
+}*/
 
 .index-card {
     margin: auto;
     padding: 100px;
     text-align: center;
-    font-family: Merriweather, serif;
 }
 
 .index-card__avatar {
@@ -21,14 +65,8 @@ body {
     animation: slideIn 3s forwards, appear 3s forwards;
 }
 
- /* Extra small devices (phones, 600px and down) */
+/* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
-    h1 {
-        font-size: 1.3em;
-    }
-    h2 {
-        font-size: 0.8em;
-    }
     .index-card__avatar {
         height: 120px;
     }
@@ -36,12 +74,6 @@ body {
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
-    h1 {
-        font-size: 2em;
-    }
-    h2 {
-        font-size: 1.1em;
-    }
     .index-card__avatar {
         height: 150px;
     }
@@ -49,12 +81,6 @@ body {
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
-    h1 {
-        font-size: 3em;
-    }
-    h2 {
-        font-size: 1.2em;
-    }
     .index-card__avatar {
         height: 180px;
     }
@@ -62,12 +88,6 @@ body {
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
-    h1 {
-        font-size: 3.2em;
-    }
-    h2 {
-        font-size: 1.3em;
-    }
     .index-card__avatar {
         height: 200px;
     }
@@ -75,12 +95,6 @@ body {
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
-    h1 {
-        font-size: 3.5em;
-    }
-    h2 {
-        font-size: 1.5em;
-    }
     .index-card__avatar {
         height: 250px;
     }
