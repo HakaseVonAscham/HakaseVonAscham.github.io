@@ -1,53 +1,36 @@
-* {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-	font-family: 'Merriweather', serif;
+/*===== Base =====*/
+*, ::before, ::after {
+    box-sizing: border-box;
 }
 
-.banner
-{
-	position: relative;
-	display: flex;
-	justify-content: space-between;
-	align-content: center;
-	min-height: 100vh;
-	padding: 100px;
-	background: #fff;
-	transition: 0.5s;
-}
-.banner.night
-{
-	background: #333;
+html {
+  	scroll-behavior: smooth;
+  	height: 100%;
+  	padding: 0;
 }
 
-.banner::before
-{
-	content: '';
-	position: absolute;
-	left: 30%;
-	top: 10%;
-	width: 150px;
-	height: 150px;
-	background: url(../images/dotted.png);
-	background-size: cover;
-	animation: animateColor 10s linear infinite;
-	transition-delay: -5px;
+body {
+  	font-family: var(--body-font);
+  	font-size: var(--normal-font-size);
+  	color: var(--second-color);
 }
 
+/*===== Header =====*/
 header
 {
-	position: absolute;
+	position: fixed;
 	top: 0;
 	left: 0;
+	 z-index: var(--z-fixed);
 	width: 100%;
 	padding: 20px 100px;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	box-shadow: 0 1px 4px rgba(146, 161, 176, 0.15);
 }
 
-header .logo
+header .nav__logo
 {
 	color: #333;
 	font-size: 2em;
@@ -56,7 +39,7 @@ header .logo
 	transition: 0.5s;
 }
 
-header .logo span
+header .nav__logo span
 {
 	color: #2196f3;
 }
@@ -78,38 +61,110 @@ header ul li a
 	transition: 0.5s;
 }
 
-.content 
+/*===== Nav =====*/
+.nav__content {
+	margin-left: var(--mb-2);
+  	margin-right: var(--mb-2);
+  	height: var(--header-height);
+  	display: flex;
+  	justify-content: space-between;
+  	align-items: center;
+  	font-weight: var(--font-semi);
+}
+
+.nav-items {
+	margin-bottom: var(--mb-4);
+}
+
+.nav__link:hover {
+  position: relative;
+}
+
+.nav__link:hover::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 0.18rem;
+  left: 0;
+  top: 2rem;
+  background-color: var(--first-color);
+}
+
+.nav__logo {
+  color: var(--second-color);
+}
+
+.nav__toggle {
+  color: var(--second-color);
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/*===== Main Content=====*/
+.main__content {
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+	align-content: center;
+	min-height: 100vh;
+	padding: 100px;
+	background: #fff;
+	transition: 0.5s;
+}
+
+.main__content.night
+{
+	background: #333;
+}
+
+.main__content::before
+{
+	content: '';
+	position: absolute;
+	left: 30%;
+	top: 10%;
+	width: 150px;
+	height: 150px;
+	background: url(../images/dotted.png);
+	background-size: cover;
+	animation: animateColor 10s linear infinite;
+	transition-delay: -5px;
+}
+
+/*===== Home Data =====*/
+
+.home__data 
 {
 	position: relative;
 	max-width: 700px;
 	z-index: 10;
 }
-.content h3
+.home__data h3
 {
 	font-size: 2em;
 	color: #333;
 	font-weight: 200;
 	transition: 0.5s;
 }
-.content h2
+.home__data h2
 {
 	font-size: 5.5em;
 	color: #333;
 	font-weight: 700;
 	transition: 0.5s;
 }
-.content h2 span
+.home__data h2 span
 {
 	color: #e91e63;
 }
-.content p
+.home__data p
 {
 	font-size: 1.2em;
 	color: #666;
 	margin: 10px 0;
 	transition: 0.5s;
 }
-.content button
+.home__data button
 {
 	position: relative;
 	background: #2196f3;
@@ -125,39 +180,44 @@ header ul li a
 	cursor: pointer;
 	transition: 0.5s;
 }
-.content button.chat
+.home__data button.chat
 {
 	background: transparent;
 	color: #333;
 }
-.content button.chat ion-icon
+.home__data button.chat ion-icon
 {
 	position: relative;
 	top: 5px;
 	color: #e91e63;
 	font-size: 1.5em;
 }
-.sci
+
+/*===== Home Data =====*/
+
+.home__social
 {
 	position: absolute;
 	bottom: 30px;
 	display: flex;
 	gap: 20px;
 }
-.sci li
+.home__social li
 {
 	list-style: none;
 }
-.sci li a
+.home__social li a
 {
 	text-decoration: none;
 	font-size: 1.75em;
 	color: #333;
 }
-.sci li a:hover
+.home__social li a:hover
 {
 	color: #2196f3;
 }
+
+/*===== Day Night =====*/
 .dayNight
 {
 	padding: 11px;
@@ -177,31 +237,31 @@ header ul li a
 	transition: 0.5s;
 	font-size: 2em;
 }
-.banner.night .dayNight
+.main__content.night .dayNight
 {
 	background: #444;
 	color: #fff;
 }
 .dayNight ion-icon:nth-child(2),
-.banner.night .dayNight ion-icon:nth-child(1)
+.main__content.night .dayNight ion-icon:nth-child(1)
 {
 	display: none;
 }
 
-.banner.night .dayNight ion-icon:nth-child(2)
+.main__content.night .dayNight ion-icon:nth-child(2)
 {
 	display: block;
 }
-.banner.night header .logo,
-.banner.night .content h2,
-.banner.night .content p,
-.banner.night .content button.chat,
-.banner.night .sci li a,
-.banner.night header ul li a
+.main__content.night header .logo,
+.main__content.night .content h2,
+.main__content.night .content p,
+.main__content.night .content button.chat,
+.main__content.night .sci li a,
+.main__content.night header ul li a
 {
 	color: #fff;
 }
-.banner.night .sci li a:hover
+.main__content.night .sci li a:hover
 {
 	color: #2196f3;
 }
