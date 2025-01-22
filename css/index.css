@@ -1,27 +1,3 @@
-/*===== Variables CSS =====*/
-:root {
-    --header-height: 3rem;
-    --font-semi: 600;
-    /*===== Colores =====*/
-    --hue-color: 221;
-    --first-color: hsl(var(--hue-color), 95%, 55%);
-    --second-color: hsl(var(--hue-color), 56%, 12%);
-    /*===== Fuente y tipografia =====*/
-    --body-font: "Parkinsans", sans-serif;
-    --big-font-size: 2rem;
-    --h2-font-size: 1.25rem;
-    --normal-font-size: .938rem;
-    --smaller-font-size: .75rem;
-    /*===== Margenes =====*/
-    --mb-2: 1rem;
-    --mb-4: 2rem;
-    --mb-5: 2.5rem;
-    --mb-6: 3rem;
-    /*===== z index =====*/
-    --z-back: -10;
-    --z-fixed: 100;
-}
-
 /*===== Base =====*/
 *, ::before, ::after {
     box-sizing: border-box;
@@ -29,6 +5,8 @@
 
 html {
     scroll-behavior: smooth;
+    height: 100%;
+    margin: 0;
 }
 
 body {
@@ -42,11 +20,10 @@ body {
     font-size: var(--normal-font-size);
     color: var(--second-color);
 }
-/*
-html{
-    height: 100%;
-    margin: 0;
-}*/
+
+h1 {
+    font-size: var(--h2-font-size);
+}
 
 .index-card {
     margin: auto;
@@ -63,6 +40,7 @@ html{
     opacity: 0;
     transform: translateX(-100px);
     animation: slideIn 3s forwards, appear 3s forwards;
+    transition: ease all .5s;
 }
 
 /* Extra small devices (phones, 600px and down) */

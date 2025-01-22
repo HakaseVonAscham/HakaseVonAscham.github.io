@@ -1,3 +1,77 @@
 .avatar {
 	border-radius: 50%;
 }
+
+/*===== Variables CSS =====*/
+:root {
+    --header-height: 3rem;
+    --font-semi: 600;
+    /*===== Colores =====*/
+    --hue-color: 221;
+    --first-color: hsl(var(--hue-color), 95%, 55%);
+    --second-color: hsl(var(--hue-color), 56%, 12%);
+    /*===== Fuente y tipografia =====*/
+    --body-font: "Parkinsans", sans-serif;
+    --big-font-size: 2rem;
+    --h2-font-size: 1.25rem;
+    --normal-font-size: .938rem;
+    --smaller-font-size: .75rem;
+    /*===== Margenes =====*/
+    --mb-2: 1rem;
+    --mb-4: 2rem;
+    --mb-5: 2.5rem;
+    --mb-6: 3rem;
+    /*===== z index =====*/
+    --z-back: -10;
+    --z-fixed: 100;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    :root {
+        --big-font-size: 1.75rem;
+        --h2-font-size: 1.40rem;
+        --normal-font-size: .57rem;
+        --smaller-font-size: .45rem;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    :root {
+        --big-font-size: 2rem;
+        --h2-font-size: 1.65rem;
+        --normal-font-size: .725rem;
+        --smaller-font-size: .55rem;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+ 	:root {
+        --big-font-size: 2.2rem;
+        --h2-font-size: 1.75rem;
+        --normal-font-size: .86rem;
+        --smaller-font-size: .65rem;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    :root {
+        --big-font-size: 2.6rem;
+        --h2-font-size: 1.95rem;
+        --normal-font-size: .938rem;
+        --smaller-font-size: .75rem;
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    :root {
+        --big-font-size: 3rem;
+        --h2-font-size: 2.1rem;
+        --normal-font-size: 1.1rem;
+        --smaller-font-size: .85rem;
+    }
+}
